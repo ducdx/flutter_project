@@ -11,17 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hello World Travel Title',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hello World Travel App"),
-          backgroundColor: Colors.deepPurple,
+        title: 'Hello World Travel Title',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
         ),
-        body: Builder(
-            builder: (context) => Padding(
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text("Hello World Travel App"),
+            backgroundColor: Colors.deepPurple,
+          ),
+          body: Builder(
+            builder: (context) => SingleChildScrollView(child: Padding(
               padding: EdgeInsets.all(32),
               child: Center(
                 child: Column(
@@ -49,7 +49,17 @@ class MyApp extends StatelessWidget {
                     ),
                     Image.network(
                       "https://images.freeimages"
-                          ".com/images/large-previews/eaa/the-beach-1464354.jpg",
+                      ".com/images/large-previews/eaa/the-beach-1464354.jpg",
+                      height: 350,
+                    ),
+                    Image.network(
+                      "https://images.freeimages"
+                      ".com/images/large-previews/eaa/the-beach-1464354.jpg",
+                      height: 350,
+                    ),
+                    Image.network(
+                      "https://images.freeimages"
+                      ".com/images/large-previews/eaa/the-beach-1464354.jpg",
                       height: 350,
                     ),
                     Padding(
@@ -62,8 +72,8 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             )),
-      ),
-    );
+          ),
+        ));
   }
 
   void contactUs(BuildContext context) {
